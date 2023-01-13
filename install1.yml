@@ -1,4 +1,4 @@
---
+---
 - hosts: serverweb
   roles:
   - wordpress
