@@ -7,7 +7,7 @@
       - name: wordpress
         dbname: wordpress
         dbuser: wordpress
-        dbpass: 'heCrE7*d2KEs'
+        dbpass: 'Azerty1+'
         dbhost: localhost
         path: /var/www
         url: http://localhost
