@@ -1,9 +1,21 @@
-- name: Hello World Sample
+- name: Deploy web app
   hosts: all
-  remote_user: root
-  become: yes
+  become: true
+  
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+  - name: Install Apache web server
+    package:
+      name: httpd
+      state: present
+      
+  - name: Copy web app files
+    copy:
+      src: "{{ play_dir }}/files/app"
+      dest: "/var/www/html"
+      
+  - name: Start Apache web server
+    service:
+      name: httpd
+      state: started
+
 
